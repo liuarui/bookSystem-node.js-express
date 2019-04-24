@@ -14,5 +14,9 @@ router.get('/toAddBook',service.toAddBook);
 //添加图书功能
 router.post('/addBook',service.addBook);
 //跳转到修改图书的页面
-router.get('toEditBook')
+router.get('/toEditBook',service.toEditBook);
+//修改图书功能
+router.post('/editBook',service.editBook)
+//删除图书功能
+router.get('/deleteBook',service.deleteBook)
 module.exports = router;
