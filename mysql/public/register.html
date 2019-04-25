@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册页面</title>
+</head>
+
+<body>
+    <form action="/register" method="GET">
+        输入您的用户名: <input type="text" name="username">
+        输入您的密码： <input type="password" name="password" id="p1" value="">
+        确认您的密码： <input type="password" name="password-check" id="p2" value="">
+        <input type="submit" value="确认注册" id="submit">
+    </form>
+    <script>
+        window.onload = () => {
+            var pw = document.getElementById("p1");
+            var pw_c = document.getElementById("p2");
+            var submit = document.getElementById("submit");
+            submit.onclick = () => {
+                if (pw[0].value != pw_c[0].value) {
+                    alert('两次密码输入不一致，请重新输入')
+                    pw.value = pw_c.value = null;
+                    return false;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
